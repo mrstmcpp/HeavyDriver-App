@@ -19,6 +19,7 @@ Each microservice has its own repository. This repository serves as a central do
 ---
 
 ## 🏗️ Microservices Overview
+- **API Gateway** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ApiGateway)
 - **Booking Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-BookingService)
 - **Auth Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-AuthService)
 - **Location Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-LocationService)
