@@ -50,8 +50,8 @@ Each microservice has its own repository. This repository serves as a central do
 Each microservice has its own setup instructions.  
 For quick start:
 1. Clone the repo you need (`git clone ...`)
-2. Run with Spring Boot (`./gradlew bootRun`)
-3. Use Eureka to discover services automatically
+2. **Start the Eureka Server first** so that all services can register and discover each other.
+3. Run with Spring Boot (`./gradlew bootRun`)
 
 ---
 <!-- ## 📂 Architecture Diagram
