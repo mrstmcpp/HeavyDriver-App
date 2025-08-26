@@ -51,7 +51,8 @@ Each microservice has its own setup instructions.
 For quick start:
 1. Clone the repo you need (`git clone ...`)
 2. **Start the Eureka Server first** so that all services can register and discover each other.
-3. Run with Spring Boot (`./gradlew bootRun`)
+3. Run your **Kafka** & **Redis** containers at **9092** & **6379** ports respectively.
+4. Run with Spring Boot (`./gradlew bootRun`)
 
 ---
 <!-- ## 📂 Architecture Diagram
