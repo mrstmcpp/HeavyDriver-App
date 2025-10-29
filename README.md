@@ -19,16 +19,17 @@ Each microservice has its own repository. This repository serves as a central do
 ---
 
 ## 🏗️ Microservices Overview
-- **API Gateway** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ApiGateway)
-- **Booking Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-BookingService)
-- **Auth Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-AuthService)
-- **Location Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-LocationService)
-- **Client Socket Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ClientSocketService)
-- **Review Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ReviewService)
 - **Eureka Service Discover Server** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-EurekaDiscoveryService)
-- **Entity Repo** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-EntityService)
+- **API Gateway** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ApiGateway)
+- **Client Socket Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ClientSocketService)
+- **Location Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-LocationService)
+- **Auth Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-AuthService)
+- **Booking Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-BookingService)
+- **Fare Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-FareService)
+- **Review Service** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-ReviewService)
 - **Passenger Frontend** → [Repo Link](https://github.com/mrstmcpp/heavydriver-frontend)
-- **Driver Client** → [Repo Link](https://github.com/mrstmcpp/SocketServiceFrontendClient)
+- **Driver Frontend** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-Driver-Frontend)
+- **Entity Repo** → [Repo Link](https://github.com/mrstmcpp/HeavyDriver-EntityService)
   
 ---
 
