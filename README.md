@@ -1,17 +1,17 @@
-**# HeavyDriver-App
-This project is a scalable ride hailing service built with a microservices architecture. Each microservice has its own repository. This repository serves as a central documentation hub.
-# HeavyDriver Ride Hailing System (Microservices Architecture)
+# HeavyDriver - Ride Hailing System (Microservices Architecture)
 
 This project is a scalable **ride hailing backend** built with a **microservices architecture**.  
 Each microservice has its own repository. This repository serves as a central documentation hub.
+
+If you want to have a deep dive in engineering behind this project. You should check it on : https://heavydriver.app/engineering
 
 ---
 
 ## 🚀 Tech Stack
 - **Backend:** Spring Boot (Java)
-- **Frontend:** React, SockJS, Google Maps API
+- **Frontend:** Vite (React), SockJS, Google Maps API
 - **Database:** MySQL, Redis
-- **Messaging:** Apache Kafka, RetroFit
+- **Async Communication:** Apache Kafka
 - **Service Discovery:** Netflix Eureka
 - **Authentication:** JWT (HttpOnly)
 - **Others:** WebSockets (STOMP), Redis GeoHash, Flyway migrations
@@ -34,34 +34,39 @@ Each microservice has its own repository. This repository serves as a central do
 ---
 
 ## 📌 Features
-- Engineered and implemented a **Microservices-based ride-booking platform** with modular components like **Authorization, Booking, Location, Client-Socket & Review services** for enhanced scalability.
-- Ensured **clean architecture** with layered services and DTOs for maintainability.
-- Integrated **Google Maps APIs** for ETA, route optimization, and fare calculation.
-- Secured RESTful endpoints using **JWT-based authentication** with HttpOnly cookies for safe session management.
-- Real-time driver location tracking using **Redis GeoHash** for efficient nearby-driver searches.
-- Implemented **STOMP WebSocket** for live driver tracking and instant booking status updates.
-- Integrated **Kafka & Retrofit** for async booking events and decoupled service communication.
-- Employed **Flyway** for automated, version-controlled DB migrations in MySQL services.
-- Applied **SOLID principles** and **Builder design pattern** for clean, maintainable, and testable code.
-- Horizontal scalability with independent microservices.
+- Checkout official Engineering page designed for engineers <3 : https://heavydriver.app/engineering
+---
+## 📂 Architecture Diagram
+![Architecture](hld.webp)
 
 ---
+
 
 ## ⚡ Running Locally
-Each microservice has its own setup instructions.  
 For quick start:
-1. Clone the repo you need (`git clone ...`)
-2. **Start the Eureka Server first** so that all services can register and discover each other.
-3. Run your **Kafka** & **Redis** containers at **9092** & **6379** ports respectively.
-4. Run with Spring Boot (`./gradlew bootRun`)
+1. Clone all the repo in your local system in a folder.
+2. Inside the folder containing all the git cloned repo, make a .env file containing following variables.
+```env
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+GOOGLE_MAPS_MAP_ID=your_google_maps_api_map_id
+AWS_ACCESS_KEY=your_aws_access_key
+AWS_SECRET_KEY=your_aws_secret_key
 
+VITE_AUTH_BACKEND_URL=http://localhost:3006/api/v1/auth
+VITE_REVIEW_BACKEND_URL=http://localhost:3006/api/v1
+VITE_LOCATION_BACKEND_URL=http://localhost:3006/api/v1/location
+VITE_BOOKING_BACKEND_URL=http://localhost:3006/api/v1/booking
+VITE_SOCKET_BACKEND_URL=http://localhost:3004/ws
+VITE_PASSENGER_FRONTEND=http://localhost:8080
+
+VITE_GATEWAY_BACKEND_URL=http://localhost:3006/api/v1
+VITE_DRIVER_BACKEND_URL=http://localhost:3006/api/v1/driver
+
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+VITE_GOOGLE_MAPS_MAP_ID=your_google_maps_api_map_id
+```
+3. Now, put `docker-compose.yml` inside the same folder.
+4. Finally, just hit your terminal with `docker compose build`.
+5. When builds finishes, just hit again `docker compose up -d`.
+6. Now, you can access your passenger's client at `localhost:8080` & driver's client at `localhost:8081`.
 ---
-<!-- ## 📂 Architecture Diagram
-(Add your architecture diagram here as an image, e.g. `![Architecture](docs/architecture.png)`)
-
---- -->
-
-
-
----
-**
