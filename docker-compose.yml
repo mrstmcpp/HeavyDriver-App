@@ -58,7 +58,7 @@ services:
   # -----------------------
   entity-service:
     build:
-      context: ./HD-EntityService
+      context: ./HeavyDriver-EntityService
       dockerfile: Dockerfile
     container_name: hd-entity-service
     environment:
@@ -74,7 +74,7 @@ services:
   # -----------------------
   hd-eureka-service:
     build:
-      context: ./HD-ServiceDiscovery
+      context: ./HeavyDriver-EurekaDiscoveryService
       dockerfile: Dockerfile
     container_name: hd-eureka-service
     ports:
@@ -113,7 +113,7 @@ services:
   auth-service:
     build:
       context: .
-      dockerfile: HD-AuthProject/Dockerfile
+      dockerfile: HeavyDriver-AuthService/Dockerfile
     container_name: hd-auth-service
     ports:
       - "3001:3001"
@@ -136,7 +136,7 @@ services:
   booking-service:
     build:
       context: .
-      dockerfile: HD-BookingService/Dockerfile
+      dockerfile: HeavyDriver-BookingService/Dockerfile
     container_name: hd-booking-service
     ports:
       - "3002:3002"
@@ -159,7 +159,7 @@ services:
   review-service:
     build:
       context: .
-      dockerfile: HD-ReviewService/Dockerfile
+      dockerfile: HeavyDriver-ReviewService/Dockerfile
     container_name: hd-review-service
     ports:
       - "3000:3000"
@@ -178,7 +178,7 @@ services:
   fare-service:
     build:
       context: .
-      dockerfile: HD-FareService/Dockerfile
+      dockerfile: HeavyDriver-FareService/Dockerfile
     container_name: hd-fare-service
     ports:
       - "3008:3008"
@@ -198,7 +198,7 @@ services:
   location-service:
     build:
       context: .
-      dockerfile: HD-LocationService/Dockerfile
+      dockerfile: HeavyDriver-LocationService/Dockerfile
     container_name: hd-location-service
     ports:
       - "3005:3005"
@@ -218,7 +218,7 @@ services:
   socket-service:
     build:
       context: .
-      dockerfile: HD-ClientSocketService/Dockerfile
+      dockerfile: HeavyDriver-ClientSocketService/Dockerfile
     container_name: hd-socket-service
     ports:
       - "3004:3004"
@@ -264,7 +264,7 @@ services:
 
   frontend-driver:
     build:
-      context: ./WebSocketClient
+      context: ./HeavyDriver-Driver-Frontend
       dockerfile: Dockerfile
       args:
         VITE_GATEWAY_BACKEND_URL: "http://localhost:3006/api/v1"
