@@ -68,5 +68,16 @@ VITE_GOOGLE_MAPS_MAP_ID=your_google_maps_api_map_id
 3. Now, put `docker-compose.yml` inside the same folder.
 4. Finally, just hit your terminal with `docker compose build`.
 5. When builds finishes, just hit again `docker compose up -d`.
-6. Now, you can access your passenger's client at `localhost:8080` & driver's client at `localhost:8081`.
+6. Lastly, add a `fare_rate` inside the mysql db using POST request on `http://localhost:3006/api/v1/fare/add-rate`.
+   ```
+   {
+    "carType" : "BIKE",
+    "baseFare": 10,
+    "perKmRate": 10,
+    "perMinRate": 1,
+    "minFare": 10,
+    "active": true
+    }
+   ```
+7. Now, you can access your passenger's client at `localhost:8080` & driver's client at `localhost:8081`.
 ---
