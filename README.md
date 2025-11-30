@@ -79,5 +79,8 @@ VITE_GOOGLE_MAPS_MAP_ID=your_google_maps_api_map_id
     "active": true
     }
    ```
-7. Now, you can access your passenger's client at `localhost:8080` & driver's client at `localhost:8081`.
+   ``
+   Make sure you login first. As of now, No admin panel is available.
+   ``
+8. Now, you can access your passenger's client at `localhost:8080` & driver's client at `localhost:8081`.
 ---
